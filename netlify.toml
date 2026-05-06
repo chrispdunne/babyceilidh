@@ -1,0 +1,4 @@
+# Static site — no bundler. Serve files from repo root.
+[build]
+  publish = "."
+  # Intentionally no command; Netlify uploads publish dir as-is.

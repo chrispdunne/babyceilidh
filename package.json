@@ -1,11 +1,8 @@
 {
   "name": "babyceilidh",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Static ceilidh landing page (Netlify). Local preview only.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "serve": "python3 -m http.server 8080"
+  }
 }
