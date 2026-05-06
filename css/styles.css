@@ -124,6 +124,29 @@ a:hover {
   outline-offset: 4px;
 }
 
+.nav-toggle:focus-visible {
+  outline: 3px solid var(--color-primary-container);
+  outline-offset: 3px;
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid var(--color-on-primary);
+  outline-offset: 3px;
+}
+
+.btn-secondary:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+.site-nav a:not(.btn):focus-visible,
+.event-row a:focus-visible,
+.footer-email-link:focus-visible,
+.footer-social-link:focus-visible {
+  outline: 3px solid var(--color-primary-container);
+  outline-offset: 3px;
+}
+
 .logo-img {
   width: auto;
   max-height: 5.5rem;
@@ -520,6 +543,9 @@ h2.section-title {
 .newsletter-embed input[type="submit"] {
   background-color: var(--color-primary) !important;
 }
+.newsletter-embed .mastfoot {
+  display: none !important;
+}
 
 /* footer */
 .site-footer {
@@ -536,6 +562,15 @@ h2.section-title {
   gap: 1.5rem;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.25rem;
+  }
 }
 
 .site-footer a {
@@ -579,4 +614,8 @@ h2.section-title {
   width: 1.5rem;
   height: 1.5rem;
   display: block;
+}
+
+.footer-email-link {
+  gap: 0.5rem;
 }
