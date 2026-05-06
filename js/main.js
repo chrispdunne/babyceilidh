@@ -15,8 +15,13 @@
     });
   }
 
+  // Year
   var yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = "© " + new Date().getFullYear();
   }
+
+  // iFrame
+  var iFrame = document.getElementById("myIframe");
+  iFrame.contentWindow.document.body.style.backgroundColor = "red";
 })();
