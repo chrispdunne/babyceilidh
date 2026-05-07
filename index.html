@@ -23,18 +23,21 @@
     />
     <meta
       property="og:image"
-      content="https://littlefolkceilidh.co.uk/img/pic-1.jpg"
+      content="https://littlefolkceilidh.co.uk/img/hero-og.webp"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
       content="Families enjoying live folk music and dancing at a Little Folk Ceilidh in Sussex"
     />
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="fonts/newsreader-v26-latin/newsreader-v26-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <link rel="stylesheet" href="css/styles.css" />
     <script type="application/ld+json">
@@ -47,7 +50,7 @@
             "name": "Little Folk Ceilidh",
             "url": "https://littlefolkceilidh.co.uk/",
             "email": "hello@littlefolkceilidh.co.uk",
-            "logo": "https://littlefolkceilidh.co.uk/img/logo.png",
+            "logo": "https://littlefolkceilidh.co.uk/img/logo.svg",
             "sameAs": [
               "https://www.facebook.com/people/Little-Folk-Ceilidh/61577533274748/",
               "https://www.instagram.com/spriggancollectiveuk/"
@@ -70,7 +73,7 @@
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "description": "Family ceilidh with live folk music and caller-led dances for ages 0–8.",
-            "image": "https://littlefolkceilidh.co.uk/img/pic-1.jpg",
+            "image": "https://littlefolkceilidh.co.uk/img/hero-og.webp",
             "location": {
               "@type": "Place",
               "name": "Ropetackle Arts Centre",
@@ -100,13 +103,19 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="logo" href="#main" aria-label="Little Folk Ceilidh — home">
-          <img
-            class="logo-img"
-            src="img/logo.png"
-            width="200"
-            height="74"
-            alt=""
-          />
+          <picture>
+            <source
+              type="image/svg+xml"
+              srcset="img/logo.svg"
+            />
+            <img
+              class="logo-img"
+              src="img/logo.png"
+              width="500"
+              height="185"
+              alt=""
+            />
+          </picture>
         </a>
         <button
           type="button"
@@ -147,12 +156,20 @@
           <div>
             <div class="hero-visual-shell">
               <div class="hero-visual">
-                <img
-                  src="img/pic-1.jpg"
-                  alt="Little Folk Ceilidh - families enjoying live folk music and dancing in Sussex"
-                  decoding="async"
-                  fetchpriority="high"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="img/hero.webp"
+                  />
+                  <img
+                    src="img/hero.jpg"
+                    alt="Little Folk Ceilidh - families enjoying live folk music and dancing in Sussex"
+                    width="1024"
+                    height="768"
+                    decoding="async"
+                    fetchpriority="high"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -191,7 +208,11 @@
         <div class="section-inner">
           <h2 id="events-heading" class="section-title">Upcoming dates</h2>
           <div class="events-panel">
-            <div class="event-row">
+            <div
+              class="event-row"
+              role="group"
+              aria-label="Ropetackle Arts Centre, 9 May 2026"
+            >
               <div>
                 <strong>Ropetackle Arts Centre Shoreham</strong>
               </div>
@@ -199,15 +220,15 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://ropetacklecentre.co.uk/events/little-folk-ceilidh-from-spriggan"
-                aria-label="Buy tickets for Little Folk Ceilidh at Ropetackle Arts Centre. Opens in a new tab."
-                >Buy tickets</a
+                aria-label="View event page for Little Folk Ceilidh at Ropetackle Arts Centre. Tickets sold out. Opens in a new tab."
+                >View event</a
               >
 
               <p class="note">
                 Little folk ceilidh at Ropetackle Arts Centre, Shoreham, 9th May
                 2026, 2.30pm
               </p>
-              <span class="tag">Sold out</span>
+              <span class="tag" aria-label="Tickets sold out">Sold out</span>
             </div>
           </div>
         </div>
@@ -229,13 +250,11 @@
                 Join the mailing list to be the first to know when the next
                 dance is announced.
               </p>
-              <div class="newsletter-embed">
-                <script
-                  async
-                  src="https://eocampaign1.com/form/9eb335b6-4962-11f1-b8a4-79a83926c823.js"
-                  data-form="9eb335b6-4962-11f1-b8a4-79a83926c823"
-                ></script>
-              </div>
+              <div
+                class="newsletter-embed"
+                role="region"
+                aria-label="Mailing list signup form"
+              ></div>
             </div>
           </div>
         </div>
@@ -249,7 +268,7 @@
           <a
             class="footer-email-link footer-social-link"
             href="mailto:hello@littlefolkceilidh.co.uk"
-            aria-label="Email hello at littlefolkceilidh.co.uk"
+            aria-label="Email Little Folk Ceilidh at hello@littlefolkceilidh.co.uk"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -264,6 +283,7 @@
                 d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"
               />
             </svg>
+            <span aria-hidden="true">Email</span>
           </a>
           <div class="footer-social" role="group" aria-label="Social media">
             <a
@@ -314,6 +334,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

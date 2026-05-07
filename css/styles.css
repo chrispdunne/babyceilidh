@@ -1,3 +1,68 @@
+/* Newsreader — latin */
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/newsreader-v26-latin/newsreader-v26-latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/newsreader-v26-latin/newsreader-v26-latin-600.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/newsreader-v26-latin/newsreader-v26-latin-700.woff2")
+    format("woff2");
+}
+
+/* Be Vietnam Pro — latin */
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/be-vietnam-pro-v12-latin/be-vietnam-pro-v12-latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/be-vietnam-pro-v12-latin/be-vietnam-pro-v12-latin-500.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/be-vietnam-pro-v12-latin/be-vietnam-pro-v12-latin-600.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/be-vietnam-pro-v12-latin/be-vietnam-pro-v12-latin-700.woff2")
+    format("woff2");
+}
+
 /* Folk-Revival tokens — Little Folk Ceilidh (Sussex) */
 :root {
   --green: #425039;
@@ -122,6 +187,10 @@ a:hover {
 .logo:focus-visible {
   outline: 3px solid var(--color-primary-container);
   outline-offset: 4px;
+}
+
+.logo picture {
+  display: contents;
 }
 
 .nav-toggle:focus-visible {
@@ -401,6 +470,10 @@ section:nth-child(odd) {
 
 .hero-visual:has(img) {
   padding: 5px;
+}
+
+.hero-visual picture {
+  display: contents;
 }
 
 .hero-visual img {
